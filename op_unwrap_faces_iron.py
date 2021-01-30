@@ -50,9 +50,6 @@ class op(bpy.types.Operator):
 def main(context):
 	print("operatyor_faces_iron()")
 
-	#Store selection
-	utilities_uv.selection_store()
-
 	bm = bmesh.from_edit_mesh(bpy.context.active_object.data)
 	uv_layers = bm.loops.layers.uv.verify()
 
